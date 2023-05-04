@@ -1,0 +1,273 @@
+/***********************************************************************
+*
+*/
+/* -----------------------------------------*/
+/* CSS */
+
+/*  configuraa rotina princiap tmanu
+.button_cripto {
+  /*
+
+  background-color: var(--cor-btn-princ-1);
+  color: var(--cor-btn-princ-1-txt);
+  width: 350px;
+  height: 60px;
+}
+.button_descripto {
+  /*
+  background-color: var(--cor-btn-princ-2);
+  color: var(--cor-btn-princ-2-txt);
+  width: 350px;
+  height: 60px;
+}
+*/
+
+/*****************************************************  
+*padrao boto principal 1 cores variaveis 1
+* 
+******************************************************/
+
+.button_princ1 {
+  /* especificos para cada batao deixar no botoes*/
+  background-color: initial;
+  background-image: linear-gradient(
+    -180deg,
+    var(--cor-btn-sec-1-hover),
+    var(--cor-btn-sec-1)
+  );
+  color: var(--cor-btn-sec-1-txt);
+  /* 
+  height: 38px;
+  width: 130px;
+  line-height: 40px;
+  */
+}
+.button_princ1:hover {
+  /* muito especifico deixar fixo sem varaivel */
+  box-shadow: rgba(253, 76, 0, 0.5) 0 5px 10px;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+/*****************************************************  
+*padrao boto principal 1 cores variaveis 1
+* 
+******************************************************/
+
+/*****************************************************  
+*padrao boto principal 2 cores variaveis 2
+* 
+******************************************************/
+.button_princ2 {
+  background-color: initial;
+  background-image: linear-gradient(
+    -180deg,
+    var(--cor-btn-princ-2-hover),
+    var(--cor-btn-princ-2)
+  );
+  color: var(--cor-btn-princ-2-txt);
+  border: 2px solid var(--cor-btn-princ-1);
+}
+
+.button_princ2:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 8px 13px;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+/*****************************************************  
+*  fim  padrao boto principal 2 cores variaveis 2
+*
+******************************************************/
+
+/* botao da apagar mensagens gravadsgravadas */
+.button_danger {
+  background-color: initial;
+  background-image: linear-gradient(
+    -180deg,
+    var(--cor-btn-danger-hover),
+    var(--cor-btn-danger)
+  );
+  color: var(--cor-btn-danger-txt);
+  height: 58px;
+  width: 95%;
+  line-height: 60px;
+}
+.button_danger:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 5px 10px;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+/* fim botao da apagar mensagens gravadsgravadas */
+
+/************************************************
+/* btao padrao estilo 1 
+/*
+*******************************************/
+.btn_pad_estilo1 {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 5px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 5px;
+  pointer-events: auto;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  /*vertical-align: top;*/
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow 0.3s;
+  margin: 5px;
+}
+/************************************************
+/* fim  btao padrao estilo 1 
+/*
+********************************************/
+
+/* padrao auxiliar botoes grandes */
+.btnPadBig {
+  border-radius: 18px;
+  margin: 15px;
+  padding: 20px;
+  gap: 8px;
+  font-size: 1em;
+  font-weight: 800;
+}
+
+/* botoes estilo diferenciasdos  ---------------------*/
+/*---  modelo butom diferenciado ---------------------*/
+/*  estudar u pouco mais a logica envovida */
+/* CSS */
+.btnPadTop9 {
+  --color: #fff;
+  --indice: -2;
+  --percentual: 1%;
+  /* width: 55px; */
+  /* text color */
+  /*
+  background: linear-gradient(
+        90deg,
+        var(--cor-btn-esp-1-grad1: ) 33%,
+        var(--cor-btn-esp-1-grad2),
+        var(--cor-btn-esp-1-grad3) 67%
+      )
+      var(--percentual, 100%) / 300% no-repeat,
+    var(--cor-btn-esp-1-grad4);
+  */
+  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%)
+      var(--percentual, 100%) / 300% no-repeat,
+    #004dff;
+
+  /* background color */
+  color: var(--cor-btn-esp-1);
+
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg * var(--indice, -1)));
+  text-shadow: calc(var(--indice, -1) * 0.08em) -0.01em 0 var(--color),
+    calc(var(--indice, -1) * -0.08em) 0.01em 2px #0004;
+  outline-offset: 0.1em;
+  transition: 0.3s;
+  border-radius: 18px;
+}
+
+.btnPadTop9:hover,
+.btnPadTop9:focus-visible {
+  --percutual: 0%;
+  --indice: 1;
+  color: rgba(242, 7, 7, 1);
+}
+
+.btnPadTop9:active {
+  text-shadow: none;
+  color: var(--color);
+  box-shadow: inset 0 0 9e9Q #0005;
+  transition: 0s;
+}
+
+.btnPadTop9 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  cursor: pointer;
+  padding: 0.1em 0.3em;
+}
+/*---  modelo butom diferenciado ---------------------*/
+/*-------------------------------fim ------------------------   */
+
+/*********************************************** 
+*
+* botao estilo 1  -curva    nao utilzado
+*  
+************************************************/
+
+.button_pad_curva {
+  display: flex;
+  position: absolute;
+
+  /* refazer esta configuracoes para ser generio */
+  position: fixed;
+  text-align: center;
+  font-size: 42px;
+  font-family: 'Raleway', sans-serif;
+  color: hsl(220, 80%, 50%);
+  width: 350px;
+  height: 100px;
+  margin-top: calc(50vh - 75px);
+  margin-left: calc(50vw - 175px);
+
+  border-radius: 30px;
+  text-shadow: 0px 5px hsl(220, 80%, 30%), 0px 10px 10px #0003;
+  box-shadow: 0px 0px 0px 15px hsl(330, 80%, 50%),
+    0px 10px 0px 15px hsl(330, 80%, 40%), 0px 20px 20px 15px #0003;
+  cursor: pointer;
+  border-radius: 100px 30px 100px 30px;
+}
+
+.button_pad_curva p {
+  margin-top: -10%;
+  transform: rotate(-3deg);
+}
+
+.button_pad_curva:hover {
+  animation: 0.8s morph ease infinite;
+}
+
+.button_pad_curva:hover p {
+  animation: 0.8s rot ease infinite;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 100px 30px 100px 30px;
+  }
+  50% {
+    border-radius: 30px 100px 30px 100px;
+  }
+  100% {
+    border-radius: 100px 30px 100px 30px;
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+/*********************************************** 
+*
+* fim  botao estilo 1  -curva
+*
+************************************************/

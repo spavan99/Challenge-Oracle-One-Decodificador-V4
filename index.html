@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Decodificador</title>
+    <!--
+    <link rel="icon" href="s.ico" />
+    -->
+    <meta name="description" content="pesquisa do googles" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta
+      property="og:description"
+      content="Silvio Pavan - Oracle One - Alura"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+     <!-- CSS SITE-->
+    <link rel="stylesheet" href="./css/sytle.css" />
+    <!-- usar icones do fontawesome.com-->
+    <script
+      src="https://kit.fontawesome.com/a5b31f3250.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- SCRIPT SITE-->
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!--  ***************************************************** 
+      * PRIMEIRA PANEL CRIPTOGRAFAR MENSAGENS
+      *********************************************************-->
+      <div class="panel panel_tam1">
+        <div class="indice_1 config_hidem">
+          <i class="fa-solid fa-pen-to-square fa-beat-fade"></i>
+        </div>
+
+        <h3 class="config msg_cripto_app">
+          Digite a mensagem a ser Criptografa ou Descritografada
+        </h3>
+        <textarea class="config texto_criptar" rows="8" cols="50"> </textarea>
+        <button
+          class="config btn_pad_estilo1 button_princ1 btn_criptar"
+          onclick="geraCripto('1')"
+        >
+          Criptar
+        </button>
+        <button
+          class="config btn_pad_estilo1 button_princ1 btn_descriptar"
+          onclick="geraCripto('2')"
+        >
+          Descriptar
+        </button>
+
+        <div class="config msg_segredo">
+          <textarea
+            class="config texto_segredo"
+            name="texto"
+            readonly
+            rows="4"
+            cols="50"
+          >
+          </textarea>
+          <p id="psec1">Mensagem</p>
+          <p id="psec2">SECRETA</p>
+          <button
+            class="config btn_pad_estilo1 button_danger btn_copiar"
+            onclick="cpTxt()"
+          >
+            Copiar
+          </button>
+        </div>
+      </div>
+
+      <!--  ***************************************************** 
+      *  SEGUNDA PANEL MENSAGEM GRAVADAS
+      *********************************************************-->
+      <div class="panel panel_tam2">
+        <!--
+        <div class="config msg_gravados">
+        -->
+        <div class="indice_1 config_hidem">
+          <i class="fa-solid fa-floppy-disk fa-beat-fade"></i>
+          <p class="tot_resumo_msg">0</p>
+        </div>
+        <h2 class="config msg_cripto_app">Mensagens GRAVADAS</h2>
+
+        <div class="config total_apagar">
+          <p id="totalmsg">Total:</p>
+          <button
+            class="btn_pad_estilo1 button_danger button_apagar"
+            onclick="apagaTodasMsgGravadas()"
+          >
+            Apagar todas Mensagens
+          </button>
+        </div>
+
+        <div class="containelistaMSGGravadas config">
+          <ul class="listaMSGGravadas"></ul>
+        </div>
+        <!--
+        </div>
+      --></div>
+
+      <!--  ***************************************************** 
+      *  TERCEIRA PANEL ABERTURA APP
+      *********************************************************-->
+      <div
+        class="panel panel_tam3 active"
+      >
+      <h3 class="config titulo_app">Criptar e Descriptar</h3>
+        <div class="log_app"><img src="./imagens/logo1.png" /></div>
+        <div class="config cor_app" onclick="configSite()">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+        <!-- formulario modal de configuracoes do app-->
+        <div class="config form_modal">
+          <h2>Configuração App</h2>
+          <div class="config grupo_config">
+            <!-- desativado colocar no futuro -------------------------------------------
+            <div class="animacao_fundo">
+              <label> Aminaçao</label><br>
+              <input type="radio" id="fundo_0" name="fundo_app" value=0 checked >
+              <label for="fundo_0">Sem Animaçao</label><br>
+              <input type="radio" id="fundo_1" name="fundo_app" value=1>
+              <label for="fundo_1">Animacao 1</label><br>
+              <input type="radio" id="fundo_2" name="fundo_app" value=2>
+              <label for="fundo_2">Animacao 2</label><br>
+              <input type="radio" id="fundo_3" name="fundo_app" value=3>
+              <label for="fundo_3">Animacao 1</label><br>
+            </div>
+            --------------------------------------------------------------------------->
+            <div class="borda_app">
+              <label>Bordas</label><br>
+              <input type="radio" id="borda_0" name="borda_app2" value=0 checked>
+              <label for="borda_0">Borda 1</label><br>
+              <input type="radio" id="borda_1" name="borda_app2" value=1>
+              <label for="borda_1">Borda 2</label><br>
+              <input type="radio" id="borda_2" name="borda_app2" value=2>
+              <label for="borda_2">Borda 3</label><br>
+              <input type="radio" id="borda_3" name="borda_app2" value=3>
+              <label for="borda_3">Borda 4</label><br>
+              <input type="radio" id="borda_4" name="borda_app2" value=4>
+              <label for="borda_4">Borda 5</label><br>
+
+            </div>
+            <div class="cores_app">
+              <label>Cores </label><br>
+              <input type="radio" id="cor_0" name="cor_app2" value=0 checked>
+              <label for="cor_0">Cor 1</label><br>
+              <input type="radio" id="cor_1" name="cor_app2" value=1>
+              <label for="cor_1">Cor 2</label><br>
+              <input type="radio" id="cor_2" name="cor_app2" value=2>
+              <label for="cor_2">Cor 3</label><br>
+              <input type="radio" id="cor_3" name="cor_app2" value=3>
+              <label for="cor_3">Cor 4</label><br>
+            </div>
+            <div class="imagem_app">
+              <label>Imagens</label><br>
+              <input type="radio" id="imagem_0" name="imagem_app2" value=0 checked>
+              <label for="imagem_0">Sem Imagme</label><br>
+              <input type="radio" id="imagem_1" name="imagem_app2" value=1>
+              <label for="imagem_1">Imagem 1</label><br>
+              <input type="radio" id="imagem_2" name="imagem_app2" value=2>
+              <label for="imagem_2">Imagem 2</label><br>
+              <input type="radio" id="imagem_3" name="imagem_app2" value=3>
+              <label for="imagem_3">Imagem 3</label><br>
+            </div>
+          </div>
+        </div>
+        <!--
+        <div clas="config footer_app">
+        -->
+          <div class="config spInfo">
+            <p id="nomeTI">SILVIO PAVAN</p>
+
+            <ul class="spRedeSocial">
+              <li>
+                <a href="https://linkedin.com/in/silvio-pavan" target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/spavan99" target="_blank"
+                  ><i class="fa-brands fa-square-github"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/silvio.pavan.54"
+                  target="_blank"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/silvio.pavan" target="_blank"
+                  ><i class="fa-brands fa-square-instagram"></i
+                ></a>
+              </li>
+            </ul>
+
+            <ul class="spLista">
+              <!-- <li>Silvio Aparecido Martin Pavan</li>-->
+              <li>Profissional TI</li>
+            </ul>
+          </div>
+          <div class="config spEntidade">
+            <!-- infomraçoes curso-->
+            <p>Oracle One</p>
+            <p>Alura T-5 2023</p>
+          </div>
+        <!--
+        </div>
+      -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

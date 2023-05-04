@@ -1,0 +1,79 @@
+:root {
+  /* cores basica site  nao alterar*/
+  --cor-branca: white;
+  --cor-preta: black;
+
+  /* cores do itens site */
+  --cor-st-geral: #f1f2f5;
+  --cor-st-banner: #072347;
+  --cor-st-primeira: #f3f5fc;
+  --cor-st-secundaria: var(--cor-st-geral);
+
+  /* cores dos texto */
+  --cor-txt-geral: black;
+  --cor-txt-h1: white;
+  --cor-txt-h2: black;
+  --cor-txt-h2: black;
+  --cor-txt-p1: black;
+  --cor-txt-p2: black;
+  --cor-txt-p2: black;
+
+  /* cores das sombras */
+  --cor-shadow-prin-pr: rgb(111, 111, 111);
+  --cor-shadow-sec-br: var(--cor-branca);
+
+  /* cores nav / menus */
+  --cor-nav-fundo: var(--cor-preta);
+  --cor-nav-txt: var(--cor-branca);
+  --cor-nav-hover-fundo: var(--cor-branca);
+  --cor-nav-hover-txt: var(--cor-preta);
+
+  /* cores dos botoes  */
+  --cor-btn-princ-1: #0a3871;
+  --cor-btn-princ-1-hover: rgb(14, 152, 14);
+  --cor-btn-princ-1-txt: var(--cor-branca);
+
+  --cor-btn-princ-2: rgba(216, 223, 232, 1);
+  --cor-btn-princ-2-hover: var(--cor-btn-princ-1-hover);
+  --cor-btn-princ-2-txt: var(--cor-preta);
+
+  --cor-btn-danger: rgb(255, 146, 78);
+  --cor-btn-danger-hover: red;
+  --cor-btn-danger-txt: var(--cor-branca);
+
+  --cor-btn-sec-1: #3003e6;
+  --cor-btn-sec-1-hover: #31a2ff;
+  --cor-btn-sec-1-txt: var(--cor-branca);
+
+  --cor-btn-sec-2: #0d57b2;
+  --cor-btn-sec-2-hover: #0d57b2;
+  --cor-btn-sec-2-txt: var(--cor-branca);
+
+  --cor-btn-sec-3: #0d57b2;
+  --cor-btn-sec-3-hover: rgb(14, 152, 14);
+  --cor-btn-sec-3-txt: var(--cor-branca);
+
+  /* bota especial cores */
+  --cor-btn-esp-1: #0000;
+  --cor-btn-esp-1-grad1: #0000;
+  --cor-btn-esp-1-grad2: #fff5;
+  --cor-btn-esp-1-grad3: var(--cor-btn-esp-1-grad1);
+  --cor-btn-esp-1-grad4: #004dff;
+
+  /* tamano letras  usar min e max  estudar mais*/
+  --tam-txt-min-site: '16px';
+  --tam-txt-max-titulo: '1.5em';
+
+  /* cores footer deve manter padrao site out nao */
+  --cor-footer-geral: rgb(0, 0, 0);
+  --cor-footer-secao1: rgb(255, 255, 255);
+  --cor-footer-secao2-d1: rgba(56, 8, 249, 0.062);
+  --cor-footer-secao2-d2: rgb(56 146 255 / 0.29);
+  --cor-footer-secao2-d3: rgba(56, 146, 255, 0.4);
+  /*footer letras */
+  --cor-footer-txt-principal: rgba(0, 0, 0, 1);
+  --cor-footer-txt-secundario: rgba(255, 255, 255, 1);
+
+  /* imagens do app */
+  --img-app-principal: '"../imagens/topsecret1.jpg"';
+}
